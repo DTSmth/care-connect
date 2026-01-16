@@ -23,7 +23,7 @@ import java.util.List;
  */
 @RestController
 @Validated
-@CrossOrigin
+@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
 @PreAuthorize("isAuthenticated()")
 @RequestMapping( path = "/users")
 public class UserController {

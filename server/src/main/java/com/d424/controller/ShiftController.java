@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/shifts")
-@CrossOrigin
+@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
 @PreAuthorize("isAuthenticated()")
 public class ShiftController {
 

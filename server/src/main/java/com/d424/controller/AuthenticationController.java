@@ -20,7 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 import javax.validation.Valid;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
 public class AuthenticationController {
 
     private final TokenProvider tokenProvider;
