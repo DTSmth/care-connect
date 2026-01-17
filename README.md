@@ -1,29 +1,52 @@
-<strong>**DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. **</strong>
+# Care Connect | Full-Stack Healthcare Management System
 
-# WESTERN GOVERNORS UNIVERSITY 
-## D424 – SOFTWARE ENGINEERING CAPSTONE
-Welcome to Software Engineering Capstone! This is an opportunity for students to develop full stack software engineering documentation and applications. They will execute documentation, unit testing, revision of software applications, and deploy software applications with scripts and containers on a cloud platform.
+**Care Connect** is a production-ready scheduling and resource management platform built for healthcare providers. It streamlines the coordination between service offerings (Respite, AFL, Day Support) and client needs through a secure, cloud-native architecture.
 
-FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
-BASIC INSTRUCTIONS
-For this assessment, you will deploy your developed full stack software product to a web service of your choice.
+## 🚀 Live Demo
+**URL:** [https://frontend-244230612831.us-east1.run.app](https://frontend-244230612831.us-east1.run.app)  
+*(Note: Application may take a moment to "spin up" due to serverless cold starts.)*
+
+## 🛠 Tech Stack
+* **Backend:** Java 17 / Spring Boot 3
+* **Data:** PostgreSQL / Hibernate JPA
+* **Cloud:** Google Cloud Platform (GCP)
+* **Infrastructure:** Cloud Run (Serverless), Cloud SQL (Managed DB), Artifact Registry
+* **DevOps:** Docker, Git, Cloud Build
+
+---
+
+## 🏗 System Architecture
+This project implements a **Serverless Containerized Architecture** to ensure high availability and cost-efficiency.
 
 
-## SUPPLEMENTAL RESOURCES  
-1.	How to clone a project to IntelliJ using Git?
 
-> Ensure that you have Git installed on your system and that IntelliJ is installed using [Toolbox](https://www.jetbrains.com/toolbox-app/). Make sure that you are using version 2022.3.2. Once this has been confirmed, click the clone button and use the 'IntelliJ IDEA (HTTPS)' button. This will open IntelliJ with a prompt to clone the proejct. Save it in a safe location for the directory and press clone. IntelliJ will prompt you for your credentials. Enter in your WGU Credentials and the project will be cloned onto your local machine.  
+* **Persistence Layer:** A managed PostgreSQL instance on Cloud SQL, utilizing custom sequences for data integrity and complex relational mapping.
+* **API Layer:** RESTful API designed with Spring Boot, handling business logic for healthcare shifts and client-service associations.
+* **Deployment:** Containerized via Docker and deployed to Google Cloud Run, allowing for horizontal scaling and "pay-per-use" infrastructure.
 
-2. How to create a branch and start Development?
+---
 
-- GitLab method
-> Press the '+' button located near your branch name. In the dropdown list, press the 'New branch' button. This will allow you to create a name for your branch. Once the branch has been named, you can select 'Create Branch' to push the branch to your repository.
+## 📋 Key Features
+* **Dynamic Scheduling:** Real-time tracking of client shifts and service availability.
+* **Relational Data Mapping:** Complex many-to-many relationships between clients and healthcare services.
+* **Cloud-Native Security:** Implementation of environment-specific configurations to keep database credentials secure in production.
+* **Scalable Infrastructure:** Deployed as a microservice ready for high-traffic environments.
 
-- IntelliJ method
-> In IntelliJ, Go to the 'Git' button on the top toolbar. Select the new branch option and create a name for the branch. Make sure checkout branch is selected and press create. You can now add a commit message and push the new branch to the local repo.
+---
 
-## SUPPORT
-If you need additional support, please navigate to the course page and reach out to your course instructor.
+## 💻 Local Setup
+1.  **Clone & Navigate:**
+    ```bash
+    git clone [https://github.com/DTSmth/care-connect.git](https://github.com/DTSmth/care-connect.git)
+    cd care-connect
+    ```
+2.  **Database Configuration:** Configure your local PostgreSQL instance in `src/main/resources/application.properties`.
+3.  **Build and Run:**
+    ```bash
+    mvn spring-boot:run
+    ```
 
-## FUTURE USE
-Take this opportunity to create or add to a simple resume portfolio to highlight and showcase your work for future use in career search, experience, and education!
+---
+
+## 📄 License
+This project is for portfolio purposes and is licensed under the MIT License.

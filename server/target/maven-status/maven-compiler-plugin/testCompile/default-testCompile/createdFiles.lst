@@ -1,0 +1,4 @@
+com\d424\service\ClientServiceTest.class
+com\d424\service\ShiftServiceTest.class
+com\d424\service\ServicesServiceTest.class
+com\d424\dao\ClientRepositoryTest.class
