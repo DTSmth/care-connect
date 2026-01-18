@@ -1,7 +1,10 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: 'https://backend-244230612831.us-east1.run.app'
+    //Live URL
+    // baseURL: 'https://backend-244230612831.us-east1.run.app'
+    // local development URL
+    baseURL: 'http://localhost:9000'
 });
 
 api.interceptors.request.use(config => {

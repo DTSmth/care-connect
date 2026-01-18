@@ -20,7 +20,10 @@ import org.springframework.web.server.ResponseStatusException;
 import javax.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
+// Live CORS
+//@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
+//Local CORS
+@CrossOrigin
 public class AuthenticationController {
 
     private final TokenProvider tokenProvider;

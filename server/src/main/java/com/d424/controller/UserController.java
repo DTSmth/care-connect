@@ -23,7 +23,10 @@ import java.util.List;
  */
 @RestController
 @Validated
-@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
+// Live CORS
+//@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
+//Local CORS
+@CrossOrigin
 @PreAuthorize("isAuthenticated()")
 @RequestMapping( path = "/users")
 public class UserController {

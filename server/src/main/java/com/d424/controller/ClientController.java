@@ -11,7 +11,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/clients")
-@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
+// Live CORS
+//@CrossOrigin(origins = "https://frontend-244230612831.us-east1.run.app")
+//Local CORS
+@CrossOrigin
 @PreAuthorize("isAuthenticated()")
 public class ClientController {
 
